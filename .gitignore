@@ -1,0 +1,16 @@
+.env
+venv/
+*build/
+test.py
+metadata.db
+uploads
+faiss_index
+*data
+.idea
+.streamlit
+.vscode/
+*.pytest_cache
+*model_cache
+*lexichat.egg-info/
+app/
+scripts/
