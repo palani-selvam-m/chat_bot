@@ -2,14 +2,11 @@ from langchain_core.callbacks import BaseCallbackHandler
 from langchain_core.callbacks import CallbackManager
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
-from typing import Optional, Dict, Any, List
+from typing import Dict, Any, List
 import os
 from dotenv import load_dotenv
 from datetime import datetime
-import asyncio
-import streamlit as st
 from langchain_core.runnables import RunnableSequence
-from langchain.chat_models import ChatOpenAI
 
 load_dotenv()
 
@@ -109,24 +106,3 @@ class LLMTracer:
         """Clear all traces."""
         self.callback_handler.clear_traces()
 
-# Example usage:
-"""
-tracer = LLMTracer()
-
-# Create a chain for document Q&A
-qa_chain = tracer.create_chain(
-    prompt_template="Based on the following context:\n{context}\n\nAnswer this question: {question}"
-)
-
-# Use the chain with tracing
-response = tracer.invoke_chain(
-    chain=qa_chain,
-    inputs={
-        "context": "Some document context here...",
-        "question": "What is mentioned about X?"
-    }
-)
-
-# Get traces for display
-traces = tracer.get_traces()
-""" 

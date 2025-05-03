@@ -98,21 +98,3 @@ class TraceViewer:
                 st.json(metadata)
             except Exception as e:
                 st.warning(f"Could not parse metadata: {e}")
-
-# Example usage in your Streamlit app:
-"""
-import streamlit as st
-from components.trace_viewer import TraceViewer
-
-def main():
-    st.title("RAG System with Trace Viewer")
-    
-    # Your other RAG components here...
-    
-    # Add the trace viewer
-    trace_viewer = TraceViewer()
-    trace_viewer.render()
-
-if __name__ == "__main__":
-    main()
-""" 

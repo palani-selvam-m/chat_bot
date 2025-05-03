@@ -1,6 +1,5 @@
 from typing import Dict, Any, List
 from .llm_tracer import LLMTracer
-from langchain.prompts import PromptTemplate
 
 class RAGChain:
     def __init__(self):
@@ -64,23 +63,3 @@ class RAGChain:
         )
         
         return response
-
-# Example usage:
-"""
-rag = RAGChain()
-
-# Process a query
-response = rag.process_query(
-    question="What are the key points about X?",
-    retrieved_documents=[
-        {"content": "Document content about X..."},
-        {"content": "More information about X..."}
-    ],
-    metadata={
-        "retrieval_method": "faiss",
-        "similarity_scores": [0.95, 0.85]
-    }
-)
-
-print(response["answer"])
-""" 

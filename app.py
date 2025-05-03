@@ -9,18 +9,12 @@ from core.chunker import ChapterAwareChunker
 from core.embedding_generator import EmbeddingGenerator
 from core.faiss_store import FAISSVectorStore
 from core.sqlite_store import SQLiteStore
-from ragas import evaluate
-from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall
 import time
 import re
 from tqdm import tqdm
 import sys
-from datasets import Dataset
-import numpy as np
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
-from ragas import SingleTurnSample
 from ragas.metrics import AspectCritic
-from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import AIMessage
 
 # Create evaluation LLM

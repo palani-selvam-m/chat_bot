@@ -1,5 +1,3 @@
-# vector_store/faiss_store.py
-
 import os
 import faiss
 import numpy as np
